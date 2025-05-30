@@ -1,0 +1,64 @@
+ @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    body {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      animation: fadeIn 0.5s ease-out;
+      text-align: center;
+    }
+    
+    .shutdown-icon {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      animation: pulse 2s infinite ease-in-out;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .shutdown-text {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    .progress-container {
+      width: 300px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin-top: 2rem;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+    
+    .footer-text {
+      position: absolute;
+      bottom: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    

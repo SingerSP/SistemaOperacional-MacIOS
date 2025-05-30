@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacIOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="apple-icon">🍎</div>
+        <div class="menu-item">Finder</div>
+        <div class="menu-item">Arquivo</div>
+        <div class="menu-item">Editar</div>
+        <div class="menu-item">Visualizar</div>
+        <div class="menu-item">Ir</div>
+        <div class="menu-item">Janela</div>
+        <div class="menu-item">Ajuda</div>
+        <div class="theme-toggle">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </div>
+        <div class="menu-time" id="time-display"></div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax-layer layer-1"></div>
+        <div class="parallax-layer layer-2"></div>
+        <div class="parallax-layer layer-3"></div>
+    </div>
+
+    <div class="desktop" id="desktop">
+        <!-- Ícones serão adicionados dinamicamente via JavaScript -->
+    </div>
+
+    <div class="dock">
+        <!-- Ícones do dock -->
+        <div class="dock-item" data-app="finder">
+            <i class="fab fa-finder" style="color: #2997ff;"></i>
+        </div>
+        <div class="dock-item" data-app="safari">
+            <i class="fab fa-safari" style="color: #1e88e5;"></i>
+        </div>
+        <div class="dock-separator"></div>
+        <div class="dock-item" data-app="trash">
+            <i class="fas fa-trash" style="color: #f44336;"></i>
+        </div>
+    </div>
+
+    <!-- Janelas de aplicativos serão injetadas aqui pelo JavaScript -->
+    <div id="windows-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+    const auth = sessionStorage.getItem('authenticated');
+    console.log("🚪 sessionStorage['authenticated'] =", auth);
+
+    if (!auth) {
+        console.warn("🔐 Não autenticado. Redirecionando...");
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = 'TI.html';
+        }, 500);
+    }
+</script>
+
+</script>
+</body>
+</html>

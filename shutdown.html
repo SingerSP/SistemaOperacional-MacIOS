@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desligando - MacIOS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="shutdown.css">
+</head>
+<body>
+    <div class="shutdown-icon">
+        <i class="fas fa-power-off"></i>
+      </div>
+      <div class="shutdown-text">Desligando o sistema...</div>
+      
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      
+      <div class="footer-text">
+        MacIOS © 2025 - Todos os direitos reservados
+      </div>
+    
+      <script>
+        // Animar a barra de progresso
+        const progressBar = document.getElementById('progressBar');
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += Math.random() * 10;
+          progressBar.style.width = `${Math.min(progress, 100)}%`;
+          
+          if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                window.location.href = 'thanks.html';
+            }, 500);
+          }
+        }, 300);
+      </script>
+</body>
+</html>

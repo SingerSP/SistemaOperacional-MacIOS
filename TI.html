@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MacIOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="TI.css">
+</head>
+<body>
+    <div class="lock-screen">
+        <div class="time-display" id="time">00:00</div>
+        <div class="date-display" id="date">Sábado, 24 de maio de 2025</div>
+        
+        <div class="users-container" id="usersContainer">
+            <!-- Usuários serão adicionados dinamicamente via JavaScript -->
+        </div>
+        
+        <div class="login-box" id="loginBox" style="display: none;">
+            <div class="user-avatar" id="currentUserAvatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-name" id="currentUserName">Usuário</div>
+            <input type="password" class="password-input" placeholder="Senha" id="password">
+            <button class="login-button" id="loginBtn">Entrar</button>
+            <div class="hint-text" id="hintText"></div>
+            <button class="back-button" id="backBtn"><i class="fas fa-arrow-left"></i> Voltar</button>
+        </div>
+        
+        <div class="power-button" id="powerBtn">
+            <i class="fas fa-power-off"></i>
+        </div>
+    </div>
+
+    <script src="TI.js"></script>
+</body>
+</html>
