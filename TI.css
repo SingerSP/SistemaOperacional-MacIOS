@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     overflow: hidden;
-    background: url('/imgs/pexels-iriser-1366957.jpg') no-repeat center center fixed;
+    background: url('imgs/pexels-iriser-1366957.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
